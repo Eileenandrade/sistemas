@@ -6,7 +6,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['iniciar_sesion'])) {
         $correo_electronico = $_POST['email'];
         $contraseña = $_POST['password'];
-    
+
+
+        
         // Verificar si el usuario existe
         $query = "SELECT * FROM usuarios WHERE email = ? AND password = ?";
         $stmt = $conexion->prepare($query);
